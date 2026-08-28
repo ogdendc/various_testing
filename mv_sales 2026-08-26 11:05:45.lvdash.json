@@ -22,8 +22,6 @@
       "name": "7d4d1049",
       "displayName": "test_default_cat",
       "queryLines": [
-        "--USE CATALOG ogden_demos_uswest2_v3_catalog;\n",
-        "--USE SCHEMA mv_resolution_test;\n",
         "\n",
         "SELECT category, MEASURE(total_amount) as tot_amount\n",
         "FROM mv_resolution_test.mv_sales\n",
