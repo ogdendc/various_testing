@@ -29,6 +29,27 @@
         "FROM mv_sales\n",
         "GROUP BY category;"
       ]
+    },
+    {
+      "name": "b6711665",
+      "displayName": "sales_view",
+      "config": {
+        "version": "1.1",
+        "source": "ogden_demos_uswest2_v3_catalog.mv_resolution_test.sales_view",
+        "dimensions": [
+          {
+            "expr": "source.*"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
     }
   ],
   "pages": [
