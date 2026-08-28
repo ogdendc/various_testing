@@ -25,7 +25,8 @@
         "USE CATALOG ogden_demos_uswest2_v3_catalog;\n",
         "USE SCHEMA mv_resolution_test;\n",
         "\n",
-        "SELECT category, MEASURE(total_amount) FROM mv_sales\n",
+        "SELECT category, MEASURE(total_amount) as tot_amount\n",
+        "FROM mv_sales\n",
         "GROUP BY category;"
       ]
     }
