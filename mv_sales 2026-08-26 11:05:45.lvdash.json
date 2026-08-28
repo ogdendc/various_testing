@@ -35,7 +35,7 @@
       "displayName": "sales_view",
       "config": {
         "version": "1.1",
-        "source": "ogden_demos_uswest2_v3_catalog.mv_resolution_test.sales_view",
+        "source": "mv_resolution_test.sales_view",
         "dimensions": [
           {
             "expr": "source.*"
