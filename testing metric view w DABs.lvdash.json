@@ -55,9 +55,9 @@
             }
           },
           "position": {
-            "x": 3,
+            "x": 6,
             "y": 0,
-            "width": 3,
+            "width": 6,
             "height": 4
           }
         },
@@ -81,7 +81,7 @@
           "position": {
             "x": 0,
             "y": 0,
-            "width": 3,
+            "width": 6,
             "height": 4
           }
         },
@@ -97,48 +97,42 @@
                     {
                       "name": "category",
                       "expression": "`category`"
+                    },
+                    {
+                      "name": "measure(total_amount)",
+                      "expression": "MEASURE(`total_amount`)"
                     }
                   ],
-                  "disaggregated": true
+                  "disaggregated": false
                 }
               }
             ],
             "spec": {
-              "version": 1,
-              "invisibleColumns": [],
-              "allowHTMLByDefault": false,
-              "itemsPerPage": 25,
-              "paginationSize": "default",
-              "condensed": true,
-              "withRowNumber": false,
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "dashboard local MV",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "rowsPerPage": 25,
+              "displayRowNumbers": false,
               "widgetType": "table",
               "encodings": {
                 "columns": [
                   {
                     "fieldName": "category",
-                    "booleanValues": [
-                      "false",
-                      "true"
-                    ],
-                    "imageUrlTemplate": "{{ @ }}",
-                    "imageTitleTemplate": "{{ @ }}",
-                    "imageWidth": "",
-                    "imageHeight": "",
-                    "linkUrlTemplate": "{{ @ }}",
-                    "linkTextTemplate": "{{ @ }}",
-                    "linkTitleTemplate": "{{ @ }}",
-                    "linkOpenInNewTab": true,
-                    "type": "string",
-                    "displayAs": "string",
-                    "visible": true,
-                    "order": 100000,
-                    "title": "category",
-                    "allowSearch": false,
-                    "alignContent": "left",
-                    "allowHTML": false,
-                    "highlightLinks": false,
-                    "useMonospaceFont": false,
-                    "preserveWhitespace": false
+                    "useForSearch": false,
+                    "actions": {
+                      "hover": {
+                        "type": "tooltip",
+                        "tooltipTemplate": "{{ @ }}"
+                      }
+                    }
+                  },
+                  {
+                    "fieldName": "measure(total_amount)"
                   }
                 ]
               },
@@ -150,12 +144,121 @@
           "position": {
             "x": 0,
             "y": 4,
-            "width": 6,
-            "height": 6
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "view",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "df1b4dda",
+                  "fields": [
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    },
+                    {
+                      "name": "amount",
+                      "expression": "`amount`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "view",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "category"
+                  },
+                  {
+                    "fieldName": "amount"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 4,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "uc-mv",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "03f52789",
+                  "fields": [
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    },
+                    {
+                      "name": "measure(total_amount)",
+                      "expression": "MEASURE(`total_amount`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "UC MV",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "category"
+                  },
+                  {
+                    "fieldName": "measure(total_amount)"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 4,
+            "width": 3,
+            "height": 3
           }
         }
       ],
-      "pageType": "PAGE_TYPE_CANVAS"
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
     }
   ],
   "uiSettings": {
