@@ -19,35 +19,16 @@
       }
     },
     {
-      "name": "7d4d1049",
-      "displayName": "test_default_cat",
+      "name": "df1b4dda",
+      "displayName": "test_view",
       "queryLines": [
-        "\n",
-        "SELECT category, MEASURE(total_amount) as tot_amount\n",
-        "FROM mv_resolution_test.mv_sales\n",
-        "GROUP BY category;"
+        "SELECT * FROM mv_resolution_test.sales_view;"
       ]
     },
     {
-      "name": "b6711665",
-      "displayName": "sales_view",
-      "config": {
-        "version": "1.1",
-        "source": "ogden_demos_uswest2_v3_catalog.mv_resolution_test.sales_view",
-        "dimensions": [
-          {
-            "expr": "source.*"
-          }
-        ],
-        "measures": [
-          {
-            "name": "count",
-            "expr": "COUNT(*)",
-            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
-            "displayName": "Count"
-          }
-        ]
-      }
+      "name": "03f52789",
+      "displayName": "mv_sales",
+      "asset_name": "ogden_demos_uswest2_v3_catalog.mv_resolution_test.mv_sales"
     }
   ],
   "pages": [
