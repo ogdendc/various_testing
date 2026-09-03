@@ -2,7 +2,7 @@
   "datasets": [
     {
       "name": "dataset1",
-      "displayName": "mv_sales",
+      "displayName": "mv_sales_local",
       "config": {
         "version": "1.1",
         "source": "ogden_demos_uswest2_v3_catalog.mv_resolution_test.mv_sales",
@@ -27,7 +27,7 @@
     },
     {
       "name": "03f52789",
-      "displayName": "mv_sales",
+      "displayName": "mv_sales_UC",
       "asset_name": "ogden_demos_uswest2_v3_catalog.mv_resolution_test.mv_sales"
     }
   ],
